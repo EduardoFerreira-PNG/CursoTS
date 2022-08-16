@@ -26,6 +26,4 @@ form.addEventListener("submit", event => {
 
 
 
-
-
 // CRTL C PARA PARAR O SERVER ****************************************
