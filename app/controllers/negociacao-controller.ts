@@ -13,13 +13,16 @@ export class NegociacaoController {
     private mensagemView = new MensagemView("#mensagemView");
 
     constructor() {
-        this.inputData = document.querySelector("#data");
-        this.inputQuantidade = document.querySelector("#quantidade");
-        this.inputValor = document.querySelector("#valor");
+        this.inputData = document.querySelector("#data") as HTMLInputElement;
+        this.inputQuantidade = document.querySelector("#quantidade") as HTMLInputElement; // estou mostrando o tipo que eu quero, mesmo existindo possibilidade dele ser null pelo tipo
+        this.inputValor = document.querySelector("#valor") as HTMLInputElement;
         this.negociacoesView.update(this.negociacoes);
     }
 
     public adiciona(): void {
+        /*
+            miau
+        */
         const negociacao = Negociacao.criaDe(
             this.inputData.value,
             this.inputQuantidade.value,
